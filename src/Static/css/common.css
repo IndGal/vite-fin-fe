@@ -1,0 +1,160 @@
+:root {
+  --main-bg-color: #fff201;
+  --main-color: #fff301;
+  --secondary-color: #ffffff;
+  --disabled-color: #676767;
+  --main-background-color: #000000;
+  --secondary-background-color: #232323;
+  --main-separator-color: #999999;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  width: 100vw;
+}
+
+
+.page {
+  max-width: 1440px;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 72px 80px auto;
+}
+
+.page-content,
+#admin-transaction-page {
+  position: relative;
+  overflow: auto;
+  scrollbar-width: none;
+  backdrop-filter: blur(70px);
+  height: auto;
+  /* border: 1px solid; */
+  border-radius: 16px;
+  background-image: linear-gradient(to top right, #ff00e500 0%, #ffffff29 100%);
+  border-image-source: linear-gradient(
+    to top right,
+    #0100fc50 0%,
+    #ffffff50 61%,
+    #fff20150 100%
+  );
+  border-image-slice: 1;
+}
+
+#page-content {
+  grid-template-rows: auto auto auto;
+  height: fit-content;
+  margin-top: 24px;
+  padding: 24px;
+}
+
+#admin-transaction-page {
+  grid-template-rows: auto auto auto;
+  height: 90vh;
+  margin-top: 24px;
+  padding: 24px;
+  width: auto;
+
+  .header {
+    margin: 24px 0;
+  }
+}
+
+/*  Chrome, Safari и Opera */
+.page-content::-webkit-scrollbar {
+  /* display: none; */
+  overflow-x: auto;
+}
+
+/*  IE, Edge и Firefox */
+.page-content {
+  -ms-overflow-style: none;
+  /* IE и Edge */
+  scrollbar-width: none;
+  /*Firefox */
+}
+
+.logo-full {
+  display: block;
+}
+
+.logo-short {
+  display: none;
+}
+
+/* MUI SPECIFIC */
+
+.MuiInputBase-input:read-only {
+  color: var(--disabled-color);
+
+  .test {
+    color: white;
+  }
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.nodata-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15%;
+}
+
+/* remove arrows from input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* for Firefox */
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 768px) {
+  .picto-root {
+    width: 100%;
+  }
+
+  .picto-app {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .page {
+    grid-template-rows: 64px 80px calc(100vh - 144px);
+    width: 100%;
+  }
+
+  .logo-full {
+    display: none;
+  }
+
+  .logo-short {
+    display: block;
+  }
+
+  #admin-transaction-page {
+    grid-template-rows: auto;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .page {
+    overflow: auto;
+  }
+}

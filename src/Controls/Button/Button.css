@@ -1,0 +1,65 @@
+.button {
+  font-family: "Helvetica Neue 55 Roman";
+  font-size: 18px;
+  height: 48px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding-inline: 8px;
+  border: unset;
+}
+
+.button.yellow {
+  flex-grow: 1;
+  background-color: var(--main-bg-color);
+  color: black;
+}
+.button.blue {
+  flex-grow: 1;
+  background-color: #0100fc;
+  color: white;
+}
+button.secondary {
+  flex-grow: 1;
+  color: white;
+  background-color: transparent;
+  font-weight: 100;
+}
+button.secondary-border {
+  flex-grow: 1;
+  color: white;
+  background-color: transparent;
+  border: 1px solid var(--main-bg-color);
+}
+button.ring {
+  width: 48px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  box-shadow: none;
+  padding-inline: 0;
+  flex-grow: unset;
+}
+.button.disabled {
+  background-color: #e8e8e8;
+  color: #a1a1a1;
+}
+.button.disabled:hover {
+  cursor: default;
+}
+
+.button.link {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    height: 40px;
+    overflow-wrap: anywhere;
+  }
+  button.ring {
+    width: 40px;
+  }
+}

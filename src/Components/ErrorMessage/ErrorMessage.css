@@ -1,0 +1,12 @@
+.error-message {
+  padding: 16px;
+
+  .header {
+    padding: 8px;
+    color: red;
+  }
+
+  .message {
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+.control.container {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--secondary-background-color);
+  margin: 0 auto;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.centered {
+    align-items: center;
+  }
+
+  &.transparent {
+    background-color: #45454545;
+  }
+
+  &.padding {
+    padding: 16px;
+  }
+
+  &.full-width {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

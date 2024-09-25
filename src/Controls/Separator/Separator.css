@@ -1,0 +1,13 @@
+.control.separator {
+  font-size: 0;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  background-color: var(--main-separator-color);
+  padding: 1px 0;
+  margin: 4px 0;
+
+  &.thin {
+    padding: 1px 0 0 0;
+  }
+}
