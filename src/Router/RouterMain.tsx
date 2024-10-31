@@ -13,7 +13,7 @@ import useAuth from "../Helpers/useAuth";
 import ErrorMessage from "../Components/ErrorMessage/ErrorMessage";
 
 export default function RouterMain() {
- // useAuth();
+  useAuth();
 
   return (
     <div className="main">
